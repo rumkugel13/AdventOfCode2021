@@ -12,3 +12,8 @@ input = File.ReadAllLines("day02.txt");
 
 Console.WriteLine("Day 02 Part 1: " + Day02.SolvePart1(Utils.ToCommands(input)));
 Console.WriteLine("Day 02 Part 2: " + Day02.SolvePart2(Utils.ToCommands(input)));
+
+input = File.ReadAllLines("day03.txt");
+
+Console.WriteLine("Day 03 Part 1: " + Day03.SolvePart1(Utils.ToCharArray(input)));
+Console.WriteLine("Day 03 Part 2: " + Day03.SolvePart2(Utils.ToCharArray(input)));
