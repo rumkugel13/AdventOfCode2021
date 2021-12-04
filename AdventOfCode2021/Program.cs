@@ -17,3 +17,10 @@ input = File.ReadAllLines("day03.txt");
 
 Console.WriteLine("Day 03 Part 1: " + Day03.SolvePart1(Utils.ToCharArray(input)));
 Console.WriteLine("Day 03 Part 2: " + Day03.SolvePart2(Utils.ToCharArray(input)));
+
+input = File.ReadAllLines("day04.txt");
+Day04 day04 = new Day04();
+day04.Parse(input);
+
+Console.WriteLine("Day 04 Part 1: " + day04.SolvePart1());
+Console.WriteLine("Day 04 Part 2: " + day04.SolvePart2());
