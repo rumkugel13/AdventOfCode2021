@@ -24,3 +24,9 @@ day04.Parse(input);
 
 Console.WriteLine("Day 04 Part 1: " + day04.SolvePart1());
 Console.WriteLine("Day 04 Part 2: " + day04.SolvePart2());
+
+input = File.ReadAllLines("day05.txt");
+Day05 day05 = new Day05(input);
+
+Console.WriteLine("Day 05 Part 1: " + day05.SolvePart1());
+Console.WriteLine("Day 05 Part 2: " + day05.SolvePart2());
