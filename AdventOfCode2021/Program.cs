@@ -48,3 +48,9 @@ Day08 day08 = new Day08(input);
 
 Console.WriteLine("Day 08 Part 1: " + day08.SolvePart1());
 Console.WriteLine("Day 08 Part 2: " + day08.SolvePart2());
+
+input = File.ReadAllLines("day09.txt");
+Day09 day09 = new Day09(input);
+
+Console.WriteLine("Day 09 Part 1: " + day09.SolvePart1());
+Console.WriteLine("Day 09 Part 2: " + day09.SolvePart2());
