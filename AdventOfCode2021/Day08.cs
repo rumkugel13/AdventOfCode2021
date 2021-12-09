@@ -50,10 +50,11 @@ namespace AdventOfCode2021
 
                 // then loop through output and match letters to numbers
                 int num = 0;
-                num += 1000 * GetIndexOfNumber(numbers, outputs[i].Split(' ')[0]);
-                num += 100 * GetIndexOfNumber(numbers, outputs[i].Split(' ')[1]);
-                num += 10 * GetIndexOfNumber(numbers, outputs[i].Split(' ')[2]);
-                num += 1 * GetIndexOfNumber(numbers, outputs[i].Split(' ')[3]);
+                var split = outputs[i].Split(' ');
+                num += 1000 * GetIndexOfNumber(numbers, split[0]);
+                num += 100 * GetIndexOfNumber(numbers, split[1]);
+                num += 10 * GetIndexOfNumber(numbers, split[2]);
+                num += 1 * GetIndexOfNumber(numbers, split[3]);
 
                 sum += num;
             }
