@@ -11,7 +11,7 @@ namespace AoCTest
         public void TestPart01()
         {
             string[] input = File.ReadAllLines("day09example.txt");
-            Day09 day09= new Day09(input);
+            Day09 day09 = new Day09(input);
 
             Assert.AreEqual(15, day09.SolvePart1());
         }

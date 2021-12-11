@@ -11,8 +11,7 @@ namespace AoCTest
         public void TestPart01()
         {
             string[] input = File.ReadAllLines("day04example.txt");
-            Day04 day04 = new Day04();
-            day04.Parse(input);
+            Day04 day04 = new Day04(input);
 
             Assert.AreEqual(4512, day04.SolvePart1());
         }
@@ -21,8 +20,7 @@ namespace AoCTest
         public void TestPart02()
         {
             string[] input = File.ReadAllLines("day04example.txt");
-            Day04 day04 = new Day04();
-            day04.Parse(input);
+            Day04 day04 = new Day04(input);
 
             Assert.AreEqual(1924, day04.SolvePart2());
         }
@@ -34,23 +32,23 @@ namespace AoCTest
             board.board = new System.Collections.Generic.List<int>(System.Linq.Enumerable.Range(0, 25));
             board.marked = new System.Collections.Generic.HashSet<int> { 0, 1, 2, 3, 4 };
 
-            Assert.IsTrue(new Day04().IsBingo(board), "First row should work");
+            Assert.IsTrue(Day04.IsBingo(board), "First row should work");
 
             board.marked = new System.Collections.Generic.HashSet<int> { 0, 5, 10, 15, 20 };
 
-            Assert.IsTrue(new Day04().IsBingo(board), "First col should work");
+            Assert.IsTrue(Day04.IsBingo(board), "First col should work");
 
             board.marked = new System.Collections.Generic.HashSet<int> { 3, 6, 9, 15, 20 };
 
-            Assert.IsFalse(new Day04().IsBingo(board), "Random should not work");
+            Assert.IsFalse(Day04.IsBingo(board), "Random should not work");
 
             board.marked = new System.Collections.Generic.HashSet<int> { 20, 21, 22, 23, 24 };
 
-            Assert.IsTrue(new Day04().IsBingo(board), "Last row should work");
+            Assert.IsTrue(Day04.IsBingo(board), "Last row should work");
 
             board.marked = new System.Collections.Generic.HashSet<int> { 4, 9, 14, 19, 24 };
 
-            Assert.IsTrue(new Day04().IsBingo(board), "Last col should work");
+            Assert.IsTrue(Day04.IsBingo(board), "Last col should work");
         }
     }
 }

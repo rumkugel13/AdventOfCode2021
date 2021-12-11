@@ -4,16 +4,9 @@ namespace AdventOfCode2021
     public class Day04
     {
         List<int> sequence;
-
         List<Board> boards;
 
-        public struct Board
-        {
-            public List<int> board;
-            public HashSet<int> marked;
-        }
-        
-        public void Parse(string[] data)
+        public Day04(string[] data)
         {
             var seq = data[0].Split(',');
             sequence = new List<int>();
@@ -25,6 +18,8 @@ namespace AdventOfCode2021
 
             boards = new List<Board>();
             Board current = new Board();
+            current.board = new List<int>(25);
+            current.marked = new HashSet<int>();
             int row = 0;
 
             for (int i = 1; i < data.Length; i++)
@@ -53,6 +48,12 @@ namespace AdventOfCode2021
                     boards.Add(current);
                 }
             }
+        }
+
+        public struct Board
+        {
+            public List<int> board;
+            public HashSet<int> marked;
         }
 
         public int SolvePart1()
@@ -129,7 +130,7 @@ namespace AdventOfCode2021
             }
         }
 
-        public bool IsBingo(Board board)
+        public static bool IsBingo(Board board)
         {
             bool row = true;
             bool col = true;
