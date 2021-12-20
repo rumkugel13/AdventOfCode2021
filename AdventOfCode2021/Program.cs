@@ -91,3 +91,23 @@ Day16 day16 = new(File.ReadAllLines("day16.txt"));
 
 Console.WriteLine("Day 16 Part 1: " + day16.SolvePart1());
 Console.WriteLine("Day 16 Part 2: " + day16.SolvePart2());
+
+//Day17 day17 = new(File.ReadAllLines("day17.txt"));
+
+//Console.WriteLine("Day 17 Part 1: " + day17.SolvePart1());
+//Console.WriteLine("Day 17 Part 2: " + day17.SolvePart2());
+
+//Day18 day18 = new(File.ReadAllLines("day18.txt"));
+
+//Console.WriteLine("Day 18 Part 1: " + day18.SolvePart1());
+//Console.WriteLine("Day 18 Part 2: " + day18.SolvePart2());
+
+//Day19 day19 = new(File.ReadAllLines("day19.txt"));
+
+//Console.WriteLine("Day 19 Part 1: " + day19.SolvePart1());
+//Console.WriteLine("Day 19 Part 2: " + day19.SolvePart2());
+
+Day20 day20 = new(File.ReadAllLines("day20.txt"));
+
+Console.WriteLine("Day 20 Part 1: " + day20.SolvePart1());
+Console.WriteLine("Day 20 Part 2: " + day20.SolvePart2());
