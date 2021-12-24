@@ -121,3 +121,13 @@ Day22 day22 = new(File.ReadAllLines("day22.txt"));
 
 Console.WriteLine("Day 22 Part 1: " + day22.SolvePart1());
 Console.WriteLine("Day 22 Part 2: " + day22.SolvePart2());
+
+//Day23 day23 = new(File.ReadAllLines("day23.txt"));
+
+//Console.WriteLine("Day 23 Part 1: " + day23.SolvePart1());
+//Console.WriteLine("Day 23 Part 2: " + day23.SolvePart2());
+
+Day24 day24 = new(File.ReadAllLines("day24.txt"));
+
+Console.WriteLine("Day 24 Part 1: " + day24.SolvePart1());
+Console.WriteLine("Day 24 Part 2: " + day24.SolvePart2());
