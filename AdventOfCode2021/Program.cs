@@ -129,5 +129,10 @@ Console.WriteLine("Day 22 Part 2: " + day22.SolvePart2());
 
 Day24 day24 = new(File.ReadAllLines("day24.txt"));
 
-Console.WriteLine("Day 24 Part 1: " + day24.SolvePart1());
+//Console.WriteLine("Day 24 Part 1: " + day24.SolvePart1());
 Console.WriteLine("Day 24 Part 2: " + day24.SolvePart2());
+
+Day25 day25 = new(File.ReadAllLines("day25.txt"));
+
+Console.WriteLine("Day 25 Part 1: " + day25.SolvePart1());
+Console.WriteLine("Day 25 Part 2: " + day25.SolvePart2());
