@@ -66,10 +66,10 @@ Day11 day11 = new(input);
 Console.WriteLine("Day 11 Part 1: " + day11.SolvePart1());
 Console.WriteLine("Day 11 Part 2: " + day11.SolvePart2());
 
-//Day12 day12 = new(File.ReadAllLines("input/day12.txt"));
+Day12 day12 = new(File.ReadAllLines("input/day12.txt"));
 
-//Console.WriteLine("Day 12 Part 1: " + day12.SolvePart1());
-//Console.WriteLine("Day 12 Part 2: " + day12.SolvePart2());
+Console.WriteLine("Day 12 Part 1: " + day12.SolvePart1());
+Console.WriteLine("Day 12 Part 2: " + day12.SolvePart2());
 
 Day13 day13 = new(File.ReadAllLines("input/day13.txt"));
 
