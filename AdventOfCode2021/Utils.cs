@@ -64,5 +64,46 @@ namespace AdventOfCode2021
 
             return result;
         }
+
+        public struct BucketHeap<T>
+        {
+            public Dictionary<int, List<T>> buckets;
+            private int minBucket;
+
+            public bool HasBuckets() => buckets.Count > 0;
+
+            public void Insert(T state, int minDist)
+            {
+                if (!buckets.ContainsKey(minDist))
+                    buckets[minDist] = new List<T>();
+
+                buckets[minDist].Add(state);
+                if (minDist < minBucket)
+                {
+                    minBucket = minDist;
+                }
+            }
+
+            public T PopMin()
+            {
+                T state = buckets[minBucket][0];
+                buckets[minBucket].RemoveAt(0);
+
+                if (buckets[minBucket].Count == 0)
+                {
+                    buckets.Remove(minBucket);
+                    minBucket = int.MaxValue;
+                    foreach (var bucket in buckets)
+                    {
+                        if (bucket.Key < minBucket)
+                        {
+                            minBucket = bucket.Key;
+                        }
+                    }
+                }
+
+                return state;
+            }
+        }
     }
 }
