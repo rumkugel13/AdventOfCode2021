@@ -18,50 +18,42 @@ input = File.ReadAllLines("input/day03.txt");
 Console.WriteLine("Day 03 Part 1: " + Day03.SolvePart1(Utils.ToCharArray(input)));
 Console.WriteLine("Day 03 Part 2: " + Day03.SolvePart2(Utils.ToCharArray(input)));
 
-input = File.ReadAllLines("input/day04.txt");
-Day04 day04 = new Day04(input);
+Day04 day04 = new Day04(File.ReadAllLines("input/day04.txt"));
 
 Console.WriteLine("Day 04 Part 1: " + day04.SolvePart1());
 Console.WriteLine("Day 04 Part 2: " + day04.SolvePart2());
 
-input = File.ReadAllLines("input/day05.txt");
-Day05 day05 = new Day05(input);
+Day05 day05 = new Day05(File.ReadAllLines("input/day05.txt"));
 
 Console.WriteLine("Day 05 Part 1: " + day05.SolvePart1());
 Console.WriteLine("Day 05 Part 2: " + day05.SolvePart2());
 
-input = File.ReadAllLines("input/day06.txt");
-Day06 day06 = new Day06(input);
+Day06 day06 = new Day06(File.ReadAllLines("input/day06.txt"));
 
 Console.WriteLine("Day 06 Part 1: " + day06.SolvePart1());
 Console.WriteLine("Day 06 Part 2: " + day06.SolvePart2());
 
-input = File.ReadAllLines("input/day07.txt");
-Day07 day07 = new Day07(input);
+Day07 day07 = new Day07(File.ReadAllLines("input/day07.txt"));
 
 Console.WriteLine("Day 07 Part 1: " + day07.SolvePart1());
 Console.WriteLine("Day 07 Part 2: " + day07.SolvePart2());
 
-input = File.ReadAllLines("input/day08.txt");
-Day08 day08 = new Day08(input);
+Day08 day08 = new Day08(File.ReadAllLines("input/day08.txt"));
 
 Console.WriteLine("Day 08 Part 1: " + day08.SolvePart1());
 Console.WriteLine("Day 08 Part 2: " + day08.SolvePart2());
 
-input = File.ReadAllLines("input/day09.txt");
-Day09 day09 = new Day09(input);
+Day09 day09 = new Day09(File.ReadAllLines("input/day09.txt"));
 
 Console.WriteLine("Day 09 Part 1: " + day09.SolvePart1());
 Console.WriteLine("Day 09 Part 2: " + day09.SolvePart2());
 
-input = File.ReadAllLines("input/day10.txt");
-Day10 day10 = new Day10(input);
+Day10 day10 = new Day10(File.ReadAllLines("input/day10.txt"));
 
 Console.WriteLine("Day 10 Part 1: " + day10.SolvePart1());
 Console.WriteLine("Day 10 Part 2: " + day10.SolvePart2());
 
-input = File.ReadAllLines("input/day11.txt");
-Day11 day11 = new(input);
+Day11 day11 = new(File.ReadAllLines("input/day11.txt"));
 
 Console.WriteLine("Day 11 Part 1: " + day11.SolvePart1());
 Console.WriteLine("Day 11 Part 2: " + day11.SolvePart2());
@@ -110,7 +102,7 @@ Console.WriteLine("Day 16 Part 2: " + day16.SolvePart2());
 Day20 day20 = new(File.ReadAllLines("input/day20.txt"));
 
 Console.WriteLine("Day 20 Part 1: " + day20.SolvePart1());
-Console.WriteLine("Day 20 Part 2: " /*+ day20.SolvePart2()*/);
+Console.WriteLine("Day 20 Part 2: " + day20.SolvePart2());
 
 Day21 day21 = new(File.ReadAllLines("input/day21.txt"));
 
