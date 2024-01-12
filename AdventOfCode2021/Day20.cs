@@ -35,18 +35,18 @@ namespace AdventOfCode2021
                 for (int x = pos.X - 1; x <= pos.X + 1; x++)
                 {
                     Point point = new Point(x, y);
-                    if (input.ContainsKey(point))
+                    if (input.TryGetValue(point, out char val))
                     {
-                        binary += input[point];
+                        binary += val == '#' ? '1' : '0';
                     }
                     else
                     {
-                        binary += flip ? '#' : '.';
+                        binary += flip ? '1' : '0';
                     }
                 }
             }
 
-            int num = Convert.ToInt32(binary.Replace('#', '1').Replace('.', '0'), 2);
+            int num = Convert.ToInt32(binary, 2);
 
             c = algorithm[num];
 
@@ -56,25 +56,30 @@ namespace AdventOfCode2021
         public int SolvePart1()
         {
             Dictionary<Point, char> data = new(input);
+            Point min = new Point(data.Select(x => x.Key.X).Min(), data.Select(x => x.Key.Y).Min());
+            Point max = new Point(data.Select(x => x.Key.X).Max(), data.Select(x => x.Key.Y).Max());
 
             for (int i = 0; i < 2; i++)
             {
                 Dictionary<Point, char> temp = new();
+                bool flip = i % 2 != 0 && algorithm[0] == '#';
 
-                Point min = new Point(data.Select(x => x.Key.X).Min(), data.Select(x => x.Key.Y).Min());
-                Point max = new Point(data.Select(x => x.Key.X).Max(), data.Select(x => x.Key.Y).Max());
-
-                for (int y =  min.Y - 2; y <= max.Y + 2; y++)
+                for (int y =  min.Y - 1; y <= max.Y + 1; y++)
                 {
-                    for (int x = min.X - 2; x <= max.X + 2; x++)
+                    for (int x = min.X - 1; x <= max.X + 1; x++)
                     {
                         Point p = new Point(x, y);
                         //if (Scan(data, p, i%2 != 0) == '#')
                         {
-                            temp.Add(p, Scan(data, p, i % 2 != 0 && algorithm[0] == '#'));
+                            temp.Add(p, Scan(data, p, flip));
                         }
                     }
                 }
+
+                min.X--;
+                min.Y--;
+                max.X++;
+                max.Y++;
 
                 data = new(temp);
             }
@@ -85,13 +90,13 @@ namespace AdventOfCode2021
         public int SolvePart2()
         {
             Dictionary<Point, char> data = new(input);
+            Point min = new Point(data.Select(x => x.Key.X).Min(), data.Select(x => x.Key.Y).Min());
+            Point max = new Point(data.Select(x => x.Key.X).Max(), data.Select(x => x.Key.Y).Max());
 
             for (int i = 0; i < 50; i++)
             {
                 Dictionary<Point, char> temp = new();
-
-                Point min = new Point(data.Select(x => x.Key.X).Min(), data.Select(x => x.Key.Y).Min());
-                Point max = new Point(data.Select(x => x.Key.X).Max(), data.Select(x => x.Key.Y).Max());
+                bool flip = i % 2 != 0 && algorithm[0] == '#';
 
                 for (int y = min.Y - 1; y <= max.Y + 1; y++)
                 {
@@ -100,10 +105,15 @@ namespace AdventOfCode2021
                         Point p = new Point(x, y);
                         //if (Scan(data, p, i%2 != 0) == '#')
                         {
-                            temp.Add(p, Scan(data, p, i % 2 != 0 && algorithm[0] == '#'));
+                            temp.Add(p, Scan(data, p, flip));
                         }
                     }
                 }
+
+                min.X--;
+                min.Y--;
+                max.X++;
+                max.Y++;
 
                 data = new(temp);
             }
